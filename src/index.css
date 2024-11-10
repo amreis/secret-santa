@@ -33,6 +33,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  padding: 2rem;
 }
 
 button {
@@ -64,5 +65,12 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+    padding: 0px;
   }
 }

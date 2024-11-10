@@ -1,6 +1,6 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GOOGLE_SCRIPT_URL } from "./data";
-import { useEffect, useState } from "react";
 
 export default function WishForParticipant() {
   const { participantId } = useParams();
