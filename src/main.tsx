@@ -8,7 +8,7 @@ import WishForParticipant from "./WishForParticipant.tsx";
 const router = createHashRouter(
   [
     {
-      path: "/",
+      path: "/*",
       element: <App />,
       action: submitAction,
     },
