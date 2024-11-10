@@ -27,7 +27,7 @@ export async function action({ request }: ActionFunctionArgs) {
       toast("Feito! Agora é só esperar o presente! 😎");
       formSubmitBtn.disabled = false;
       await new Promise((r) => setTimeout(r, 3500));
-      return redirectDocument("/");
+      return redirectDocument(import.meta.env.BASE_URL);
     },
     () => alert("Algo deu errado, chama o Álister <3")
   );
