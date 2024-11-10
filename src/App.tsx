@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ActionFunctionArgs, Form, redirectDocument } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
 import "./App.css";
 import { GOOGLE_SCRIPT_URL } from "./data";
+
+import teteu from "./assets/mc-teteu-dingo-bell.mp3";
 
 export async function action({ request }: ActionFunctionArgs) {
   if (request.method !== "POST") {
@@ -34,8 +36,21 @@ export async function action({ request }: ActionFunctionArgs) {
 }
 
 function App() {
+  const audio = new Audio(teteu);
+
   const [name, setName] = useState("");
   const [wish, setWish] = useState("");
+
+  const [easterEggCount, setEasterEggCount] = useState(0);
+  const incEasterEgg = () => {
+    setEasterEggCount(easterEggCount + 1);
+  };
+
+  useEffect(() => {
+    if (easterEggCount < 3) return;
+    audio.play();
+    setEasterEggCount(0);
+  }, [easterEggCount, audio]);
 
   return (
     <>
@@ -43,8 +58,8 @@ function App() {
       <br />
       <div className="introContainer">
         <p>
-          E aí, família! Hora de decidir o que cada um quer ganhar de Amigo Secreto no Natal 🎄🎁😎{" "}
-          <br />
+          E aí, família! Hora de decidir o que cada um quer ganhar de Amigo Secreto no Natal 🎄🎁
+          <span onClick={incEasterEgg}>😎</span> <br />
           <br />
           Preencham o nome, o presente que vocês querem, e cliquem no &quot;Manda ver!&quot; ali
           embaixo. Pode demorar um pouquinho pra página atualizar, mas confia que vai dar bom. Beijo
