@@ -1,11 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import App, { action as submitAction } from "./App.tsx";
 import "./index.css";
 import WishForParticipant from "./WishForParticipant.tsx";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "/",
@@ -17,7 +17,6 @@ const router = createBrowserRouter(
       element: <WishForParticipant />,
     },
   ],
-  { basename: "/secret-santa/" }
 );
 
 createRoot(document.getElementById("root")!).render(
