@@ -41,6 +41,16 @@ function App() {
     <>
       <h1>Natal da Guerreirada &mdash; Amigo Secreto 🎅</h1>
       <br />
+      <div className="introContainer">
+        <p>
+          E aí, família! Hora de decidir o que cada um quer ganhar de Amigo Secreto no Natal 🎄🎁😎{" "}
+          <br />
+          <br />
+          Preencham o nome, o presente que vocês querem, e cliquem no &quot;Manda ver!&quot; ali
+          embaixo. Pode demorar um pouquinho pra página atualizar, mas confia que vai dar bom. Beijo
+          em todos vocês!
+        </p>
+      </div>
       <div className="container">
         <Form className="wishForm" method="post" action="/">
           <label htmlFor="name">Seu nome ou Apelido: </label>

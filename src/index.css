@@ -55,6 +55,20 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.introContainer {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  font-size: medium;
+  text-align: justify;
+  align-self: center;
+  width: 70%;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -72,5 +86,9 @@ button:focus-visible {
   h1 {
     font-size: 2em;
     padding: 0px;
+  }
+
+  p {
+    width: 100%;
   }
 }
