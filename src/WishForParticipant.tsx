@@ -13,10 +13,7 @@ export default function WishForParticipant() {
     url.searchParams.set("uid", participantId!);
 
     const fetchData = async () => {
-      const resp = await fetch(url, {
-        mode: "cors",
-        redirect: "follow",
-      });
+      const resp = await fetch(url);
       const asJson = await resp.json();
 
       setWhoYouGotName(asJson.name);
