@@ -9,7 +9,6 @@ export default function WishForParticipant() {
 
   useEffect(() => {
     const url = new URL(GOOGLE_SCRIPT_URL);
-    console.log(url);
     url.searchParams.set("uid", participantId!);
 
     const fetchData = async () => {
