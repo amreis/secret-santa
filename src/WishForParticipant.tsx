@@ -29,7 +29,7 @@ export default function WishForParticipant() {
   return (
     <div>
       <p>Você tirou: {whoYouGotName}</p>
-      <div>Essa pessoa pediu: {whoYouGotWish}</div>
+      <div><p>Essa pessoa pediu: <br />{whoYouGotWish}</p></div>
     </div>
   );
 }
