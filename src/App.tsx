@@ -36,7 +36,6 @@ export async function action({ request }: ActionFunctionArgs) {
 }
 
 function App() {
-  const audio = new Audio(teteu);
 
   const [name, setName] = useState("");
   const [wish, setWish] = useState("");
@@ -48,9 +47,10 @@ function App() {
 
   useEffect(() => {
     if (easterEggCount < 3) return;
+    const audio = new Audio(teteu);
     audio.play();
     setEasterEggCount(0);
-  }, [easterEggCount, audio]);
+  }, [easterEggCount]);
 
   return (
     <>
@@ -96,7 +96,7 @@ function App() {
           <ToastContainer autoClose={3000} />
         </Form>
         <aside style={{ float: "right" }}>
-          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFtM5ue3BaKX7U1ab66FMmNEHAzD0yZZZTo0wk1LpowvcsY_OQ4awck9riRiPdLUlq8x1jIH59PoWI/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_2t2rH_wp0n-KgV5yDK94VcDztYe3I9sbE3rdm0te9cJHlgTAiLrll2qA2Uq0wSuYxBUFxKildXL9/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
         </aside>
       </div>
     </>
