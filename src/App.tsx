@@ -70,21 +70,25 @@ function App() {
         <Form className="wishForm" method="post" action="/">
           <label htmlFor="name">Seu nome ou Apelido: </label>
           <input
+            id="name"
             type="text"
             required
             placeholder="Insira seu nome..."
             name="name"
             onChange={(e) => setName(e.target.value)}
+            autoComplete="given-name"
             value={name}
           />
           <label htmlFor="wish">O que você quer ganhar de Natal?</label>
           <textarea
+            id="wish"
             name="wish"
             className="wishTextArea"
             placeholder="Exemplo: Sabonetes, o presente favorito da tia Márcia"
             required
             onChange={(e) => setWish(e.target.value)}
             value={wish}
+            autoComplete="off"
           />
           <button
             id="submit-button"
