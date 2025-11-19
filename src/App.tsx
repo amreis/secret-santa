@@ -100,7 +100,7 @@ function App() {
           <ToastContainer autoClose={3000} />
         </Form>
         <aside style={{ float: "right" }}>
-          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_2t2rH_wp0n-KgV5yDK94VcDztYe3I9sbE3rdm0te9cJHlgTAiLrll2qA2Uq0wSuYxBUFxKildXL9/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&amp;range=A1:B&amp;chrome=false"></iframe>
+          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_2t2rH_wp0n-KgV5yDK94VcDztYe3I9sbE3rdm0te9cJHlgTAiLrll2qA2Uq0wSuYxBUFxKildXL9/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;range=A1:B&amp;chrome=false"></iframe>
         </aside>
       </div>
     </>
