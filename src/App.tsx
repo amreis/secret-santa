@@ -84,7 +84,10 @@ function App() {
             id="wish"
             name="wish"
             className="wishTextArea"
-            placeholder="Exemplo: Sabonetes, o presente favorito da tia Márcia"
+            placeholder={
+              "Exemplo: Sabonetes, o presente favorito da tia Márcia. " +
+              "Ou caso não queira escolher, escreva isso! Por exemplo 'Meu amigo secreto pode escolher.'"
+            }
             required
             onChange={(e) => setWish(e.target.value)}
             value={wish}
@@ -100,7 +103,7 @@ function App() {
           <ToastContainer autoClose={3000} />
         </Form>
         <aside style={{ float: "right" }}>
-          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_2t2rH_wp0n-KgV5yDK94VcDztYe3I9sbE3rdm0te9cJHlgTAiLrll2qA2Uq0wSuYxBUFxKildXL9/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;range=A1:B&amp;chrome=false"></iframe>
+          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTkldXbJBNtKFWYQmw7EG_6z7n3xF9leE2FXRgSm53ENX7Ak4Y8P7CM1SP1eoVRd4rAgR2qXdv6bFe0/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;range=A1:B&amp;chrome=false"></iframe>
         </aside>
       </div>
     </>
